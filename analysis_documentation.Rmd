@@ -1,0 +1,57 @@
+---
+title: "R Script Documentation"
+author: "BDA400 TALHA ALI"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+# Purpose
+
+This document explains a single R analysis workflow and demonstrates how an R script can be documented with clear Markdown headings, code blocks, inputs, and outputs.
+
+## Inputs
+
+The example uses a small synthetic dataset created directly in the R document. It contains a category field and a numeric value field.
+
+## Outputs
+
+The workflow:
+
+- Displays the synthetic data.
+- Calculates the mean of the numeric values.
+- Creates a simple summary table.
+- Demonstrates a reproducible R analysis structure.
+
+## Example Code
+
+```{r setup, message=FALSE, warning=FALSE}
+library(tidyverse)
+
+data <- tibble(
+  category = c("A", "B", "C", "D"),
+  value = c(12, 18, 15, 20)
+)
+
+data
+```
+
+## Summary Calculation
+
+```{r summary}
+mean_value <- mean(data$value)
+mean_value
+```
+
+The mean is calculated directly by R from the synthetic values in the dataset.
+
+## Verification
+
+The code and document structure should be previewed or knitted in RStudio/Posit Cloud. The Markdown headings, code chunks, and generated output should be checked for correct rendering.
+
+## Reproducibility
+
+The example does not depend on personal or confidential information. The dataset is created in the document, making the example reproducible when the R Markdown file is knitted.
+
+## AI Assistance Declaration
+
+AI Assistance Declaration: I used ChatGPT for documentation structure, Markdown formatting, and wording suggestions. Prompts used included requests for README sections, Markdown formatting, R Markdown organization, and syntax validation. I verified the structure and code manually by reviewing the Markdown and R code. All final calculations are done by myself. I am responsible for the accuracy and originality of this work.
